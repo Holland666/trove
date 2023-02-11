@@ -1,4 +1,5 @@
 # trove
+Day 1~5
 //static 静态局部变量，还可以限制作用域（仅在本文件中运用）
 void test()
  {
@@ -191,3 +192,105 @@ int main()
     return 0;
 }
 
+Day 6
+int main()                 //字符类型也属于整数类型 int
+{                          //getchar()输入字符
+    char ch;               //putchar()输出字符 等同于printf
+    while((ch=getchar())!=EOF)   // !EOF 在输入中为“ctrl z”即可终止
+    putchar(ch);                 //(end of file)
+    return 0;
+}
+
+int main()
+{   int a=0;
+    while(a<=10)
+    {
+       if(a==6)     //continue终止本次循环，跳转到while语句判断部分
+       continue;    //进行下一次循环判断
+       printf("%d\n",a);
+       a++;
+    }
+    return 0;
+}
+
+int main()
+{   int day;
+    scanf("%d",&day);
+    switch(day)
+    {case 1:           //case语句避免多个else if使用繁琐
+     case 2:
+     case 3:
+     case 4:
+     case 5:
+        printf("工作日");
+        break;
+     case 6:
+     case 7:
+        printf("休息日");
+        break;
+     default:
+        printf("输入错误！");
+    }
+    return 0;
+}
+
+int main()
+{  int day=0;
+   scanf("%d",&day);
+   switch(day)  //switch只限于整型变量，case后只跟整型常量
+   {case 1:     //break跳出过程，若没有则继续执行下一语句
+       printf("星期一\n");
+       break;
+   case 2:
+       printf("星期二\n");
+       break;
+   case 3:
+       printf("星期三\n");
+       break;
+   case 4:
+       printf("星期四\n");
+       break;
+   case 5:
+       printf("星期五\n");
+       break;
+   default:      //default处理非法语句（别忘加冒号）
+       break;
+   }
+    return 0;
+}
+
+//求一到一百奇数
+int main()
+{
+    int a=1;
+    while(a<=100)
+    {
+       printf("%d\n",a);
+       a+=2;
+    }
+    return 0;
+}
+ or
+int main()
+{  int i=1;
+   while(i<100)
+   {
+    if(i%2==1)
+       printf("%d\n",i);
+    i++;
+   }
+    return 0;
+}
+
+
+int main()
+{
+    int a=8;
+    if(a<5)
+     printf("good!\n");
+    else if(a>=5&&a<=10)  //&&并列
+     printf("better!\n");
+    else
+     printf("bad!\n");
+    return 0;
+}
